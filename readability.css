@@ -1,0 +1,5 @@
+/* 保持中文释义为正常正文字号，移动端图示使用独立布局。 */
+.guide-card p,.term-card p,.lab-controls>p,.faq-grid details p,#dialog-content p{font-size:1rem}
+.side-link,.quick-links button,.filters button,.lab-tabs button,.lab-controls label{font-size:.875rem}
+#lab-svg text{font-size:16px}#lab-svg .small-text{font-size:14px}
+@media(max-width:720px){#lab-svg{max-height:350px;min-height:260px}.guide-card{grid-template-columns:85px minmax(0,1fr)}.term-grid{grid-template-columns:1fr}.term-card{min-height:0}.term-card h3{font-size:1.05rem}.term-en{font-size:.8rem}.term-card p{margin-top:4px}.section-number{font-size:.75rem}.lab-tabs button{padding:7px 9px}.stage-bottom{align-items:flex-start}.stage-bottom>span{max-width:70%}.source-links{grid-template-columns:1fr}.source-links>span{grid-column:auto}}
