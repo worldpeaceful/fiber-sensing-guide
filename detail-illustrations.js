@@ -26,14 +26,32 @@ function loadDetailAsset(src,style=false){
   element.onload=()=>done(true);element.onerror=()=>done(false);document.head.appendChild(element);
  });detailAssetJobs.set(src,job);return job;
 }
+function setDetailIllustrationState(slot,state){
+ slot.dataset.ready=String(state==='ready');
+ slot.setAttribute('aria-busy',String(state==='loading'));
+ slot.querySelector('[data-mechanism-loading]').hidden=state!=='loading';
+ slot.querySelector('[data-mechanism-content]').hidden=state!=='ready';
+ slot.querySelector('[data-mechanism-fallback]').hidden=state!=='error';
+}
 function mountDetailIllustration(content){
  const slot=content.querySelector('[data-mechanism-detail]');
- if(!slot||typeof SVGSVGElement==='undefined')return;
- const begin=()=>loadDetailAsset('detail-mechanisms.js?v=4').then(()=>{if(slot.isConnected&&slot.closest('dialog')?.open)window.DetailMechanisms.mount(slot);}).catch(()=>{
+ if(!slot)return;
+ if(typeof SVGSVGElement==='undefined'){
+  setDetailIllustrationState(slot,'error');
+  slot.querySelector('[data-mechanism-status]').textContent='当前浏览器暂不支持装置对照，仍可查看简图与三步解释。';
+  return;
+ }
+ const begin=()=>{
+  setDetailIllustrationState(slot,'loading');
+  slot.querySelector('[data-mechanism-status]').textContent='正在准备装置的前后对照…';
+  slot.querySelector('[data-mechanism-retry]').hidden=true;
+  return loadDetailAsset('detail-mechanisms.js?v=5').then(()=>{if(slot.isConnected&&slot.closest('dialog')?.open)return window.DetailMechanisms.mount(slot);}).catch(()=>{
   if(!slot.isConnected||!slot.closest('dialog')?.open)return;
+  setDetailIllustrationState(slot,'error');
   slot.querySelector('[data-mechanism-status]').textContent='装置对照图暂时未载入，仍可查看简图与三步解释。';
   const retry=slot.querySelector('[data-mechanism-retry]');retry.hidden=false;retry.onclick=begin;
- });begin();
+  });
+ };return begin();
 }
 const DETAIL_ILLUSTRATION_CAPTIONS={
  function:{
@@ -60,7 +78,7 @@ function renderDetailIllustration(kind,record){
  const isMethod=kind==='method';
  const base=isMethod?methodIllustration(record.id):functionIllustration(record.id);
  const topic=DETAIL_MECHANISM_TOPICS[kind]?.[record.id],heading=DETAIL_MECHANISM_HEADINGS[topic];
- const illustration=topic?`<div class="mechanism-detail" data-mechanism-detail="${topic}"><h3 class="mechanism-title" tabindex="-1">${heading[0]}</h3><p class="mechanism-intro">${heading[1]}</p><div data-mechanism-content>${base}</div><div class="mechanism-status" role="status"><span data-mechanism-status>简图已就绪，装置对照图按需载入。</span><button type="button" data-mechanism-retry hidden>重新加载对照图</button></div></div>`:base;
+ const illustration=topic?`<div class="mechanism-detail" data-mechanism-detail="${topic}" data-ready="false" aria-busy="true"><h3 class="mechanism-title" tabindex="-1">${heading[0]}</h3><p class="mechanism-intro">${heading[1]}</p><div class="mechanism-placeholder" data-mechanism-loading aria-hidden="true"><div class="mechanism-placeholder-devices"><span></span><span></span></div><div class="mechanism-placeholder-response"></div></div><div data-mechanism-content hidden></div><div data-mechanism-fallback hidden>${base}</div><div class="mechanism-status" role="status"><span data-mechanism-status>正在准备装置的前后对照…</span><button type="button" data-mechanism-retry hidden>重新加载对照图</button></div></div>`:base;
  const caption=DETAIL_ILLUSTRATION_CAPTIONS[kind]?.[record.id]||'具体光路、敏感结构与读出方式随技术方案而变化。';
  return `<figure class="function-diagram detail-illustration${isMethod?' method-diagram':''}" role="group" aria-label="${esc(record.title+'原理示意与测量过程')}" data-illustration-kind="${isMethod?'method':'function'}" data-illustration-id="${esc(record.id)}">${illustration}<ol class="detail-process" aria-label="测量过程">${record.diagram.map((label,i)=>`<li><span class="detail-step-number" aria-hidden="true">${i+1}</span><span class="detail-step-copy">${esc(label)}</span></li>`).join('')}</ol><figcaption>原理示意 · ${esc(caption)}</figcaption></figure>`;
 }

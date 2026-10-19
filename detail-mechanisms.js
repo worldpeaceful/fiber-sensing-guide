@@ -68,6 +68,7 @@
   const mode=spec.mode||topic;
   const status=slot.querySelector('[data-mechanism-status]'),retryButton=slot.querySelector('[data-mechanism-retry]');
   const restoreFocus=document.activeElement===retryButton;
+  setDetailIllustrationState(slot,'loading');
   retryButton.hidden=true;status.textContent='正在准备装置的前后对照…';
   const live=()=>ticket===generation&&slot.isConnected&&slot.closest('dialog')?.open;
   try{
@@ -99,10 +100,11 @@
    if(spec.mode){plot.setAttribute('viewBox','0 0 360 190');plot.innerHTML=methodPlot(topic);}
    content.querySelector('[data-mechanism-reading]').textContent=readingText(topic,values);
    content.querySelector('.mechanism-state-switch').onclick=event=>{const button=event.target.closest('[data-compare-state]');if(!button)return;content.querySelector('.mechanism-frames').dataset.selectedState=button.dataset.compareState;content.querySelectorAll('[data-compare-state]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));};
-   slot.dataset.ready='true';status.textContent='装置对照已就绪。';
+   setDetailIllustrationState(slot,'ready');status.textContent='装置对照已就绪。';
    if(restoreFocus&&(document.activeElement===document.body||document.activeElement===retryButton))slot.querySelector('.mechanism-title').focus({preventScroll:true});
   }catch{
    if(!live())return;
+   setDetailIllustrationState(slot,'error');
    status.textContent='装置对照图暂时未载入，仍可查看简图与三步解释。';retryButton.hidden=false;retryButton.onclick=()=>mount(slot,true);
   }
  }

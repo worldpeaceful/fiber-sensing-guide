@@ -54,6 +54,12 @@ html[data-theme="dark"] .function-diagram.detail-illustration { padding:18px; ba
 /* 专用详情对照：文字留在图外，实体与光信号使用既有主题。 */
 .field-guide #dialog-content .mechanism-title { margin:0 0 8px; color:var(--ill-ink); font-size:18px; line-height:1.6; font-weight:650; }
 .field-guide #dialog-content .mechanism-intro { margin:0 0 22px; color:var(--ill-muted); font-size:14px; line-height:1.8; }
+.mechanism-placeholder { margin:0 0 18px; }
+.mechanism-placeholder-devices { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.mechanism-placeholder-devices span,.mechanism-placeholder-response { display:block; border:1px solid var(--line); border-radius:10px; background:var(--ill-panel); }
+.mechanism-placeholder-devices span { min-height:220px; }
+.mechanism-placeholder-response { height:150px; margin-top:22px; }
+[data-mechanism-loading][hidden],[data-mechanism-content][hidden],[data-mechanism-fallback][hidden] { display:none!important; }
 .mechanism-frames { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
 .mechanism-state { min-width:0; margin:0; overflow:hidden; }
 .field-guide #dialog-content .mechanism-state > figcaption { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:4px 8px; padding:0 0 8px; color:var(--ill-muted); font-size:12px; border-bottom:1px solid var(--line); }
@@ -80,6 +86,9 @@ html[data-theme="dark"] .function-diagram.detail-illustration { padding:18px; ba
 .mechanism-status button[hidden] { display:none; }
 .mechanism-detail[data-ready="true"] .mechanism-status { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
 @media(max-width:600px) {
+ .mechanism-placeholder-devices { grid-template-columns:1fr; }
+ .mechanism-placeholder-devices span+span { display:none; }
+ .mechanism-placeholder-devices span { min-height:190px; }
  .mechanism-frames { grid-template-columns:1fr; gap:20px; }
  .field-guide #dialog-content .mechanism-title { font-size:17px; }
  .field-guide #dialog-content .mechanism-intro { margin-bottom:16px; }
