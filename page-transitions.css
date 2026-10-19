@@ -1,0 +1,37 @@
+/* 转场只移动阅读区域，顶部导航在切换时保持稳定。 */
+@view-transition { navigation:auto; }
+:root { --page-enter-x:22px; --page-leave-x:-12px; }
+:root[data-transition-direction="backward"] { --page-enter-x:-22px; --page-leave-x:12px; }
+main { view-transition-name:fiber-content; }
+.topbar { view-transition-name:fiber-header; }
+.page-directory { view-transition-name:fiber-directory; }
+.topnav a { transition:color .18s ease; }
+.topnav a.active::after { view-transition-name:fiber-nav-indicator; }
+@keyframes fiber-enter {
+  from { opacity:0; transform:translateX(var(--page-enter-x)) translateY(6px); }
+  to { opacity:1; transform:translate(0,0); }
+}
+@keyframes fiber-leave {
+  from { opacity:1; transform:translateX(0); }
+  to { opacity:0; transform:translateX(var(--page-leave-x)); }
+}
+@keyframes fiber-directory-enter { from { opacity:0; } to { opacity:1; } }
+@keyframes fiber-directory-leave { from { opacity:1; } to { opacity:0; } }
+.page-arriving main { animation:fiber-enter .38s cubic-bezier(.22,1,.36,1) both; }
+.page-leaving main { animation:fiber-leave .13s ease-in both; pointer-events:none; }
+::view-transition-old(root), ::view-transition-new(root) { animation:none; mix-blend-mode:normal; }
+::view-transition-group(fiber-content) { animation-duration:.34s; animation-timing-function:cubic-bezier(.22,1,.36,1); }
+::view-transition-old(fiber-content) { animation:fiber-leave .18s ease-in both; mix-blend-mode:normal; }
+::view-transition-new(fiber-content) { animation:fiber-enter .34s cubic-bezier(.22,1,.36,1) both; mix-blend-mode:normal; }
+::view-transition-group(fiber-header) { animation:none; z-index:3; }
+::view-transition-old(fiber-header) { animation:none; opacity:0; }
+::view-transition-new(fiber-header) { animation:none; }
+::view-transition-group(fiber-nav-indicator) { animation-duration:.34s; animation-timing-function:cubic-bezier(.22,1,.36,1); z-index:4; }
+::view-transition-old(fiber-nav-indicator), ::view-transition-new(fiber-nav-indicator) { animation:none; }
+::view-transition-old(fiber-directory) { animation:fiber-directory-leave .15s ease both; }
+::view-transition-new(fiber-directory) { animation:fiber-directory-enter .28s ease both; }
+@media(prefers-reduced-motion:reduce) {
+  @view-transition { navigation:none; }
+  .page-arriving main, .page-leaving main { animation:none; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation:none!important; }
+}

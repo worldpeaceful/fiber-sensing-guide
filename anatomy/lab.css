@@ -1,0 +1,47 @@
+/* 十套实物装置共用站点语义色。 */
+.lab-scene-status { min-height:clamp(300px,48vw,510px); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; color:var(--muted); font-size:13px; text-align:center; }
+.lab-scene-status[hidden] { display:none; }
+.lab-scene-status button { min-height:44px; padding:8px 16px; background:var(--surface); border:1px solid var(--line); border-radius:8px; color:var(--blue); cursor:pointer; }
+.anatomy-pending #lab-svg { display:none; }
+.lab-apparatus.iso { --anatomy-paper:#f1f5fa; --anatomy-face:#fff; --anatomy-top:#fbfdff; --anatomy-shade-0:#9cacc1; --anatomy-shade-1:#b5c4d6; --anatomy-shade-2:#d0dbe7; --anatomy-shade-3:#e3ebf3; --anatomy-hi:#405776; --anatomy-mid:#71859e; --anatomy-lo:#93a4bb; --anatomy-faint:#c3cddb; --anatomy-lit:#315be8; --anatomy-lit-top:#e4edff; --anatomy-lit-shade:#b7caf2; --anatomy-halo:#8398b2; --anatomy-halo-opacity:.15; --anatomy-dot:#36506f; --anatomy-weight:.7px; margin-top:18px; }
+html[data-theme="dark"] .lab-apparatus { --anatomy-paper:#1b2940; --anatomy-face:#30445f; --anatomy-top:#344860; --anatomy-shade-0:#101c2e; --anatomy-shade-1:#1e2e47; --anatomy-shade-2:#263954; --anatomy-shade-3:#2b3f59; --anatomy-hi:#c1d1e8; --anatomy-mid:#92a8c3; --anatomy-lo:#536b8a; --anatomy-faint:#3b506d; --anatomy-lit:#9bb8ff; --anatomy-lit-top:#48618d; --anatomy-lit-shade:#344a71; --anatomy-halo:#07101e; --anatomy-halo-opacity:.5; --anatomy-dot:#c0d2e9; }
+.field-guide[data-page="lab"] .lab-stage.anatomy-active { background:var(--surface-raised,#f7f9fd); }
+.field-guide[data-page="lab"] .anatomy-active .stage-top { color:var(--ink); }
+.field-guide[data-page="lab"] .anatomy-active .demo-tag { color:var(--muted); border-color:var(--line); }
+.apparatus-heading { display:flex; justify-content:space-between; gap:12px; font-size:11px; color:var(--muted); }
+.apparatus-heading>span:first-child { font-weight:600; color:var(--ink); }
+.lab-apparatus .iso-svg { max-width:760px; margin:0 auto; }
+.apparatus-caption { margin:0; padding:0 0 14px; border-bottom:1px solid var(--line); font-size:11px; line-height:1.9; color:var(--muted); min-height:3.8em; }
+.field-guide[data-page="lab"] .anatomy-active #lab-svg { margin:12px 0 16px; max-height:none; height:auto; aspect-ratio:auto; }
+.field-guide[data-page="lab"] .anatomy-active .stage-bottom { color:var(--muted); border-color:var(--line); }
+.field-guide[data-page="lab"] .anatomy-active .stage-hint,.field-guide[data-page="lab"] .anatomy-active .static-note,.field-guide[data-page="lab"] .anatomy-active .animation-tools label { color:var(--muted); }
+.field-guide[data-page="lab"] .anatomy-active .animation-tools button,.field-guide[data-page="lab"] .anatomy-active .animation-tools select,.field-guide[data-page="lab"] .anatomy-active .stage-reading>span { color:var(--ink); background:var(--surface); border-color:var(--line); }
+.field-guide[data-page="lab"] .anatomy-active .stage-parameter-link { color:var(--blue); }
+.anatomy-plot text { fill:var(--muted)!important; font-family:inherit; font-size:12px; }
+.anatomy-plot .anatomy-plot-title { fill:var(--ink)!important; font-size:13px; }
+.anatomy-plot path { fill:none; vector-effect:non-scaling-stroke; }
+.anatomy-grid { stroke:var(--line); stroke-width:1; }
+.anatomy-current { stroke:var(--blue); stroke-width:2; }
+.anatomy-reference { stroke:var(--muted); stroke-width:1.2; stroke-dasharray:4 4; }
+.anatomy-plot-dot { fill:var(--blue); stroke:var(--surface); stroke-width:1.5; }
+.anatomy-reference-dot { fill:var(--surface); stroke:var(--muted); stroke-width:1.5; }
+.apparatus-position { fill:var(--surface); stroke:var(--blue); stroke-width:1.5; }
+.apparatus-pulse { fill:var(--blue); stroke:var(--surface); stroke-width:1; }
+.apparatus-pulse[data-returning="true"] { fill:#8d68d9; }
+.apparatus-reference { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:3 4; }
+.apparatus-light { fill:none; stroke:var(--blue); stroke-width:2; }
+.apparatus-load { fill:none; stroke:var(--blue); stroke-width:1.5; }
+.lab-apparatus [data-membrane-top] { fill:var(--anatomy-lit-top); }
+.lab-apparatus [data-membrane-edge] { fill:none; stroke:var(--anatomy-lit); stroke-width:.7px; vector-effect:non-scaling-stroke; }
+@media(max-width:720px) { .apparatus-heading { font-size:10px; } .apparatus-caption { font-size:11px; } .field-guide[data-page="lab"] .anatomy-active #lab-svg { margin:10px 0; } }
+.lab-apparatus { --seven-fluorescence:#169879; }
+html[data-theme="dark"] .lab-apparatus { --seven-fluorescence:#78e7c2; }
+.seven-needle,.seven-excitation,.seven-current-arrow,.seven-thermal-mark { fill:none;stroke:var(--blue);stroke-width:1.8;stroke-linecap:round;vector-effect:non-scaling-stroke; }
+.seven-pivot { fill:var(--blue); }
+.seven-turn { fill:none;stroke:var(--anatomy-hi);stroke-width:1.5;stroke-linecap:round;vector-effect:non-scaling-stroke; }
+.iso-line.seven-core-a { stroke:var(--blue);stroke-width:1.5; }
+.iso-line.seven-core-b { stroke:#9472c6;stroke-width:1.5; }
+.seven-fluorescence { fill:var(--seven-fluorescence);stroke:var(--seven-fluorescence);stroke-width:1; }
+.seven-plot-other { stroke:#9472c6;stroke-width:2; }
+.seven-bar-a { fill:#d08a55; }
+.seven-bar-b { fill:var(--blue); }

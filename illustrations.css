@@ -1,0 +1,87 @@
+/* 图形颜色按语义定义；明暗主题都保留对象、光信号和参考线的层次。 */
+:root {
+  --ill-surface:#eef4ff;
+  --ill-panel:#ffffff;
+  --ill-ink:#223b62;
+  --ill-muted:#465d7e;
+  --ill-line:#657c9f;
+  --ill-blue:#2e58ba;
+  --ill-orange:#a94b1e;
+  --ill-teal:#0c7469;
+  --ill-purple:#7050a9;
+  --ill-ghost:#dbe6f7;
+}
+html[data-theme="dark"] {
+  --ill-surface:#111f34;
+  --ill-panel:#192d49;
+  --ill-ink:#e5eeff;
+  --ill-muted:#b7c9e5;
+  --ill-line:#7997be;
+  --ill-blue:#8fb6ff;
+  --ill-orange:#ffb27d;
+  --ill-teal:#73d9c4;
+  --ill-purple:#c5b0ff;
+  --ill-ghost:#284362;
+}
+.welcome-picture.hero-illustration,
+.topic-picture.hero-illustration { background:var(--ill-surface); border:1px solid var(--line); overflow:hidden; }
+.hero-illustration svg { display:block; width:100%; height:auto; aspect-ratio:4/3; color:var(--ill-ink); font-family:"Microsoft YaHei","PingFang SC",sans-serif; }
+.hero-illustration figcaption { margin:0; padding:16px 22px 20px; border-top:1px solid var(--line); color:var(--muted); font-size:.78rem; line-height:1.9; background:var(--surface); }
+.card-illustration { display:block; width:100%; color:var(--ill-ink); background:var(--ill-surface); border:1px solid var(--line); border-radius:14px; }
+.card-illustration svg { display:block; width:100%; height:auto; font-family:"Microsoft YaHei","PingFang SC",sans-serif; }
+/* 旧暗色规则不能抹掉每张图的语义配色。 */
+html[data-theme="dark"] .card-illustration { background:var(--ill-surface); color:var(--ill-ink); }
+.function-diagram.detail-illustration,
+html[data-theme="dark"] .function-diagram.detail-illustration { padding:18px; background:var(--ill-surface); border-color:var(--line); }
+.detail-illustration .card-illustration { max-width:430px; margin:0 auto 20px; border:0; border-radius:8px; }
+.detail-illustration .card-illustration svg { max-height:none; }
+.detail-illustration .detail-process { list-style:none; display:grid; grid-template-columns:1fr; gap:12px; margin:0; padding:0; }
+.detail-process li { display:flex; align-items:center; gap:12px; min-width:0; padding:12px 14px; border:1px solid var(--line); background:var(--ill-panel); border-radius:10px; line-height:1.8; }
+.detail-process .detail-step-number { flex:0 0 28px; display:grid; place-items:center; width:28px; height:28px; border-radius:50%; color:var(--ill-blue); border:1px solid var(--ill-line); font-size:.8rem; font-variant-numeric:tabular-nums; }
+.detail-process .detail-step-copy { color:var(--ill-ink); font-size:.88rem; min-width:0; overflow-wrap:anywhere; }
+.function-diagram.detail-illustration figcaption { padding:16px 2px 0; color:var(--muted); line-height:1.9; font-size:.78rem; }
+/* 实验仍在固定深色画布上展示；提高轴线与图例的识别度。 */
+.lab #lab-svg .plot-label { fill:#bdcfeb; }
+.lab #lab-svg line[stroke="#304769"] { stroke:#48638a; }
+.lab #lab-svg line[stroke="#6880a7"] { stroke:#9bb5db; }
+.lab-stage { border-bottom:1px solid #405d87; }
+@media(max-width:720px) {
+  .hero-illustration figcaption { padding:13px 16px 16px; font-size:.8rem; }
+  .function-diagram.detail-illustration { padding:12px; }
+  .detail-process li { padding:11px; gap:10px; }
+  .detail-process .detail-step-copy { font-size:.9rem; }
+}
+/* 专用详情对照：文字留在图外，实体与光信号使用既有主题。 */
+.field-guide #dialog-content .mechanism-title { margin:0 0 8px; color:var(--ill-ink); font-size:18px; line-height:1.6; font-weight:650; }
+.field-guide #dialog-content .mechanism-intro { margin:0 0 22px; color:var(--ill-muted); font-size:14px; line-height:1.8; }
+.mechanism-frames { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.mechanism-state { min-width:0; margin:0; overflow:hidden; }
+.field-guide #dialog-content .mechanism-state > figcaption { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:4px 8px; padding:0 0 8px; color:var(--ill-muted); font-size:12px; border-bottom:1px solid var(--line); }
+.mechanism-state > figcaption strong { color:var(--ill-ink); font-size:14px; }
+.mechanism-state .mechanism-model.lab-apparatus { margin:4px 0 0; overflow:hidden; }
+.mechanism-model .apparatus-heading,.mechanism-model .apparatus-notes { display:none; }
+.mechanism-inset { margin:7px 0; border-top:1px solid var(--line); padding-top:7px; }
+.mechanism-inset > span { color:var(--ill-muted); font-size:11px; }
+.function-diagram .mechanism-inset svg { max-height:none; width:100%; height:auto; }
+.function-diagram .mechanism-model svg { max-height:none; aspect-ratio:1.6; width:100%; height:auto; overflow:hidden; }
+.field-guide #dialog-content .mechanism-note { margin:8px 0 0; font-size:13px; line-height:1.8; color:var(--ill-muted); }
+.mechanism-response { margin:22px 0 0; padding-top:18px; border-top:1px solid var(--line); }
+.mechanism-response h4 { margin:0 0 7px; color:var(--ill-ink); font-size:15px; font-weight:650; line-height:1.7; }
+.field-guide #dialog-content .mechanism-legend { margin:0 0 12px; color:var(--ill-muted); font-size:13px; line-height:1.8; }
+.function-diagram .mechanism-plot { width:100%; max-width:430px; max-height:none; margin-inline:auto; overflow:visible; }
+.mechanism-plot .anatomy-plot text { font-size:18px; }
+.mechanism-plot .seven-bar-a { fill:var(--ill-purple); }
+.mechanism-plot .seven-bar-b { fill:var(--ill-orange); }
+.mechanism-hidden-plot[hidden] { display:none!important; }
+.field-guide #dialog-content .mechanism-reading { margin:10px 0 0; font-size:14px; line-height:1.8; color:var(--ill-ink); font-weight:550; }
+.field-guide #dialog-content .mechanism-conclusion { margin:18px 0 22px; padding-left:12px; border-left:2px solid var(--ill-blue); color:var(--ill-muted); font-size:14px; line-height:1.9; }
+.mechanism-status { display:flex; flex-wrap:wrap; align-items:center; gap:8px; color:var(--muted); font-size:12px; line-height:1.8; margin:0 0 18px; }
+.mechanism-status button { color:var(--blue); background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:8px 12px; min-height:44px; cursor:pointer; }
+.mechanism-status button[hidden] { display:none; }
+.mechanism-detail[data-ready="true"] .mechanism-status { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+@media(max-width:600px) {
+ .mechanism-frames { grid-template-columns:1fr; gap:20px; }
+ .field-guide #dialog-content .mechanism-title { font-size:17px; }
+ .field-guide #dialog-content .mechanism-intro { margin-bottom:16px; }
+ .function-diagram .mechanism-model svg { aspect-ratio:1.9; }
+}

@@ -112,7 +112,7 @@ function drawExperiment(width) {
   const cx = compact ? 180 : 183, cy = compact ? 119 : 172;
   const gx = compact ? 44 : 402, gw = compact ? 282 : 310, gy = compact ? 410 : 340, gh = compact ? 120 : 148;
   const signed = ['shape', 'fog', 'current'].includes(state.mode), zero = signed ? gy - gh / 2 : gy;
-  const graphTitle = {pressure:'相对光栅响应 · 0–1',shape:'两侧纤芯相对应变',fog:'萨格纳克相位差 · rad',chemical:'相对荧光强度 · 0–1',current:'偏振旋转 · °'}[state.mode];
+  const graphTitle = {pressure:'膜片形变 · 归一化',shape:'两侧纤芯相对应变',fog:'萨格纳克相位差 · rad',chemical:'相对荧光强度 · 0–1',current:'偏振旋转 · °'}[state.mode];
   svg += plotFrame(gx, gy, gw, gh, state.mode === 'chemical' ? 'pH 0' : state.mode === 'shape' ? '沿线起点' : signed ? '−100%' : '0%', state.mode === 'chemical' ? 'pH 14' : state.mode === 'shape' ? '沿线终点' : '100%', graphTitle);
   if (signed) {
     svg += line(gx, zero, gx + gw, zero, '#6e86aa', 1, DASH);
@@ -122,15 +122,13 @@ function drawExperiment(width) {
   } else svg += text(gx - 7, gy - gh * .85 + 5, '1', 'plot-label', 'end') + text(gx - 7, gy + 5, '0', 'plot-label', 'end');
   if (state.mode === 'pressure') {
     const base = cy + 5, sag = a * 32, fy = base + 69;
-    svg += text(cx, compact ? 29 : 46, '压力 → 膜片 → 光栅', 'main-text', 'middle') + line(cx - 120, base, cx + 120, base, '#8195b6', 1, DASH);
+    svg += text(cx, compact ? 29 : 46, '压力 → 膜片 → 光学腔', 'main-text', 'middle') + line(cx - 120, base, cx + 120, base, '#8195b6', 1, DASH);
     svg += `<path d="M ${cx - 120} ${base} Q ${cx} ${base + sag * 2} ${cx + 120} ${base}" fill="none" stroke="#9bc9ff" stroke-width="4"/>`;
     if (v > 0) for (const dx of [-64, 0, 64]) {
       const start = base - 29 - a * 32, end = base - 12;
       svg += line(cx + dx, start, cx + dx, end, '#ffc29f', 2) + `<path d="M${cx + dx - 5} ${end - 7}l5 7 5-7" fill="none" stroke="#ffc29f" stroke-width="2"/>`;
     }
-    svg += line(cx, base + sag, cx, fy, '#809dca', 3) + line(cx - 120, fy, cx + 120, fy, '#638bbc', 3);
-    const spacing = 11 + a * 4;
-    for (let i = 0; i < 9; i++) svg += line(cx + (i - 4) * spacing, fy - 12, cx + (i - 4) * spacing, fy + 12, '#9bc9ff', 3);
+    svg += line(cx, base + sag, cx, fy-10, '#9bc9ff', 2) + `<rect x="${cx-12}" y="${fy-10}" width="24" height="28" rx="3" fill="#294267" stroke="#9bc9ff"/>`;
     svg += text(cx, compact ? 242 : 310, '虚线：未受压的膜片', 'small-text', 'middle');
   } else if (state.mode === 'shape') {
     const span = compact ? 266 : 272, start = cx - span / 2, base = compact ? 139 : 192;

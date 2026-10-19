@@ -1,0 +1,93 @@
+/* 实验台：选择在左，图示居中，参数与读数靠近。仅作用于互动实验页。 */
+.field-guide[data-page="lab"] .shell { display:block; max-width:1320px; }
+.field-guide[data-page="lab"] .sidebar.page-directory,
+.field-guide[data-page="lab"] .mobile-directory { display:none; }
+.field-guide[data-page="lab"] .shell>main { padding-top:24px; }
+.field-guide[data-page="lab"] .page-crumb { margin-bottom:18px; }
+.field-guide[data-page="lab"] .section-heading { margin-bottom:4px; }
+.field-guide[data-page="lab"] .section-heading h1 { font-size:34px; }
+.field-guide[data-page="lab"] .section-number { display:none; }
+.field-guide[data-page="lab"] .lab-heading-copy { margin:9px 0 23px; font-size:15px; }
+.field-guide[data-page="lab"] .lab { border-radius:14px; overflow:hidden; }
+.field-guide[data-page="lab"] .lab-nav { display:flex; align-items:center; justify-content:space-between; padding:10px 18px; gap:12px; }
+.field-guide[data-page="lab"] .lab-nav span { order:-1; padding:0; text-align:left; margin-right:auto; color:var(--ink); font-size:14px; font-weight:650; }
+.field-guide[data-page="lab"] .lab-nav button { min-height:36px; width:auto; background:var(--surface-raised); }
+.field-guide[data-page="lab"] .lab-stage { display:flex; flex-direction:column; min-height:0; padding:22px 26px; background:#12213b; }
+.field-guide[data-page="lab"] .stage-top { align-items:center; gap:12px; font-size:15px; color:#e3edff; }
+.field-guide[data-page="lab"] .demo-tag { border-color:#516583; color:#c0d0eb; background:transparent; white-space:nowrap; }
+.field-guide[data-page="lab"] .lab #lab-svg { margin:24px auto; max-width:840px; }
+.field-guide[data-page="lab"] .stage-bottom { margin-top:auto; padding-top:16px; border-top:1px solid #364b6b; gap:10px; }
+.field-guide[data-page="lab"] .stage-hint { color:#c0cde2; }
+.field-guide[data-page="lab"] .animation-tools { width:100%; gap:8px; }
+.field-guide[data-page="lab"] .animation-tools button { min-height:38px; background:#1d3150; border-color:#4b6285; color:#e3edff; }
+.field-guide[data-page="lab"] .animation-tools label { color:#c0cde2; margin-left:auto; }
+.field-guide[data-page="lab"] .animation-tools select { min-height:38px; background:#1d3150; border-color:#4b6285; color:#e3edff; }
+.field-guide[data-page="lab"] .lab .lab-controls { padding:24px; }
+.field-guide[data-page="lab"] .control-kicker { display:none; }
+.field-guide[data-page="lab"] .lab .lab-controls h3 { margin:0 0 8px; font-size:22px; }
+.field-guide[data-page="lab"] .control-explanation { margin-bottom:19px; }
+.field-guide[data-page="lab"] .lab-control { margin-bottom:19px; }
+.field-guide[data-page="lab"] .lab .lab-controls label { font-size:14px; }
+.field-guide[data-page="lab"] .lab .lab-controls output { font-size:16px; font-weight:650; }
+.field-guide[data-page="lab"] .lab .lab-controls input[type="range"] { accent-color:#315be8; }
+.field-guide[data-page="lab"] .lab .lab-result { border:0; border-left:3px solid var(--blue); border-radius:0 9px 9px 0; background:var(--soft); padding:16px 18px; }
+.field-guide[data-page="lab"] .lab .lab-result strong { display:block; font-size:32px; margin:5px 0; }
+.field-guide[data-page="lab"] .lab-result strong small { font-size:16px; }
+.field-guide[data-page="lab"] .lab .lab-result p { margin-bottom:0; }
+.field-guide[data-page="lab"] .lab .lab-actions { gap:8px; }
+.field-guide[data-page="lab"] .lab .compare-button { color:var(--blue); border-color:var(--blue); }
+.field-guide[data-page="lab"] .learning-drawer { grid-column:1/-1; border-top:1px solid var(--line); padding:15px 24px; }
+.field-guide[data-page="lab"] .lab .lab-note { grid-column:1/-1; padding:12px 24px; }
+
+@media(min-width:1200px) {
+  .field-guide[data-page="lab"] .lab { display:grid; grid-template-columns:182px minmax(0,1fr); grid-template-rows:auto 1fr auto auto; }
+  .field-guide[data-page="lab"] .lab-picker { grid-column:1; grid-row:1/3; border:0; border-right:1px solid var(--line); background:var(--surface-raised); }
+  .field-guide[data-page="lab"] .lab-picker>summary { flex-wrap:wrap; gap:4px 10px; min-height:62px; padding:13px 16px; border-bottom:1px solid var(--line); }
+  .field-guide[data-page="lab"] .lab-picker>summary>strong { font-size:12px; }
+  .field-guide[data-page="lab"] .picker-toggle { display:none; }
+  .field-guide[data-page="lab"] .lab .lab-tabs { grid-template-columns:minmax(0,1fr); gap:7px; padding:12px 10px 18px; }
+  .field-guide[data-page="lab"] .lab .experiment-group { display:flex; flex-direction:column; flex-wrap:nowrap; align-items:stretch; align-content:stretch; padding:0; gap:1px; }
+  .field-guide[data-page="lab"] .lab .experiment-group>span { padding:0 10px; line-height:1.6; font-size:10px; }
+  .field-guide[data-page="lab"] .lab .lab-tabs button { width:100%; text-align:left; min-height:34px; padding:5px 10px; font-size:13px; }
+  .field-guide[data-page="lab"] .lab-nav { grid-column:2; grid-row:1; }
+  .field-guide[data-page="lab"] .lab .lab-body { grid-column:2; grid-row:2; display:grid; grid-template-columns:minmax(0,1fr) 300px; align-items:stretch; }
+  .field-guide[data-page="lab"] .lab .lab-controls { display:block; border:0; border-left:1px solid var(--line); padding:24px 22px; }
+  .field-guide[data-page="lab"] .lab-controls .result-column { margin-top:24px; }
+  .field-guide[data-page="lab"] .stage-parameter-link,
+  .field-guide[data-page="lab"] .stage-return { display:none; }
+  .field-guide[data-page="lab"] .lab .lab-stage { min-height:600px; }
+  .field-guide[data-page="lab"] .lab #lab-svg { margin:auto 0; }
+}
+@media(min-width:721px) and (max-width:1199px) {
+  .field-guide[data-page="lab"] .lab .lab-tabs { padding:4px 14px 14px; }
+  .field-guide[data-page="lab"] .lab .lab-controls { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:0 28px; }
+  .field-guide[data-page="lab"] .control-intro { grid-column:1/-1; }
+  .field-guide[data-page="lab"] .lab-controls .result-column { grid-column:2; grid-row:2; margin-top:0; }
+  .field-guide[data-page="lab"] .lab .lab-body { grid-template-columns:minmax(0,1fr); }
+}
+@media(max-width:720px) {
+  .field-guide[data-page="lab"] .shell { width:calc(100% - 32px); }
+  .field-guide[data-page="lab"] .shell>main { padding-top:24px; }
+  .field-guide[data-page="lab"] .page-crumb { display:none; }
+  .field-guide[data-page="lab"] .section-heading { display:block; }
+  .field-guide[data-page="lab"] .section-heading h1 { font-size:27px; line-height:1.55; }
+  .field-guide[data-page="lab"] .lab-label { display:none; }
+  .field-guide[data-page="lab"] .lab-heading-copy { margin:10px 0 20px; font-size:14px; line-height:1.9; }
+  .field-guide[data-page="lab"] .lab-picker>summary { padding:13px 16px; min-height:56px; }
+  .field-guide[data-page="lab"] .lab-nav { padding:9px 12px; gap:6px; flex-wrap:wrap; }
+  .field-guide[data-page="lab"] .lab-nav span { font-size:12px; }
+  .field-guide[data-page="lab"] .lab-nav button { font-size:11px; min-height:44px; padding:5px 8px; }
+  .field-guide[data-page="lab"] .lab .lab-stage { padding:18px 14px; }
+  .field-guide[data-page="lab"] .stage-top { font-size:13px; }
+  .field-guide[data-page="lab"] .lab #lab-svg { margin:18px auto; }
+  .field-guide[data-page="lab"] .stage-bottom { padding-top:13px; }
+  .field-guide[data-page="lab"] .animation-tools label { margin-left:0; }
+  .field-guide[data-page="lab"] .animation-tools button,
+  .field-guide[data-page="lab"] .animation-tools select { min-height:44px; }
+  .field-guide[data-page="lab"] .lab .lab-controls { display:block; padding:24px 18px; }
+  .field-guide[data-page="lab"] .lab .lab-controls h3 { font-size:21px; }
+  .field-guide[data-page="lab"] .lab-controls .result-column { margin-top:24px; }
+  .field-guide[data-page="lab"] .lab .lab-presets button { min-height:44px; }
+  .field-guide[data-page="lab"] .learning-drawer { padding:15px 18px; }
+  .field-guide[data-page="lab"] .lab .lab-note { padding:12px 18px; }
+}

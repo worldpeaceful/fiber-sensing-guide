@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>互动实验 · 光纤传感小百科</title>
+<meta name="description" content="十个原理实验，动手改变参数，观察光的回答。">
+<link rel="canonical" href="https://fiber-sensing-guide.hejd1993.chatgpt.site/lab.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="光纤传感小百科">
+<meta property="og:title" content="互动实验 · 光纤传感小百科">
+<meta property="og:description" content="十个原理实验，动手改变参数，观察光的回答。">
+<meta property="og:url" content="https://fiber-sensing-guide.hejd1993.chatgpt.site/lab.html">
+<meta property="og:image" content="https://fiber-sensing-guide.hejd1993.chatgpt.site/images/fiber-world-v1.png">
+<meta name="theme-color" content="#3459df">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233459df'/%3E%3Cpath d='M5 16h5l3-7 6 14 3-7h5' fill='none' stroke='white' stroke-width='2.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script src="theme-init.js?v=13"></script>
+<script src="page-transitions.js?v=13"></script>
+<link rel="stylesheet" href="style.css?v=13"><link rel="stylesheet" href="readability.css?v=13"><link rel="stylesheet" href="functions.css?v=13"><link rel="stylesheet" href="lab.css?v=13">
+<link rel="stylesheet" href="methods.css?v=13"><link rel="stylesheet" href="layout.css?v=13">
+<link rel="stylesheet" href="pages.css?v=13">
+<link rel="stylesheet" href="friendly.css?v=13">
+<link rel="stylesheet" href="header-tools.css?v=13">
+<link rel="stylesheet" href="page-transitions.css?v=13">
+<link rel="stylesheet" href="page-directory.css?v=13">
+<link rel="stylesheet" href="illustrations.css?v=17">
+<link rel="stylesheet" href="site-design.css?v=1">
+<link rel="stylesheet" href="site-pages.css?v=1">
+<link rel="stylesheet" href="lab-workbench.css?v=2">
+<link rel="stylesheet" href="anatomy/iso.css?v=1">
+<link rel="stylesheet" href="anatomy/lab.css?v=2">
+<link rel="stylesheet" href="lab-learning.css?v=1">
+<link rel="stylesheet" href="detail-reading.css?v=1">
+</head>
+<body data-page="lab" class="field-guide">
+<noscript><div class="noscript-note">JavaScript 未启用，仍可阅读页面正文。功能图鉴、测试方法和术语词典的卡片可打开完整文字资料；互动实验和搜索需要启用 JavaScript。</div></noscript>
+<a class="skip" href="#main">跳到主要内容</a>
+<header class="topbar"><a class="brand" href="index.html" aria-label="光纤传感小百科首页"><span class="brand-icon" aria-hidden="true">∿</span><span>光纤传感小百科<small>从看懂一束光开始</small></span></a><nav class="topnav" aria-label="主导航"><a href="index.html" data-page-link="intro">首页</a><a href="guide.html" data-page-link="guide">功能图鉴</a><a href="methods.html" data-page-link="methods">测试方法</a><a href="lab.html" data-page-link="lab" class="active" aria-current="page">互动实验</a><a href="terms.html" data-page-link="terms">术语词典</a><a href="questions.html" data-page-link="questions">常见问题</a></nav><div class="header-tools"><form id="site-search-form" class="header-search" role="search" aria-label="全站关键词检索"><input id="site-search-input" type="search" name="q" placeholder="搜索关键词" aria-label="全站关键词" autocomplete="off" maxlength="120"><button type="submit" class="header-search-button" aria-label="搜索全站" title="关键词检索"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button></form><button type="button" id="theme-toggle" class="theme-toggle" aria-label="切换到黑夜模式" title="切换到黑夜模式" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14a8.5 8.5 0 0 1-10-10A8.5 8.5 0 1 0 20 14Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button></div></header>
+<div class="shell">
+<aside class="sidebar page-directory"><div class="side-kicker">本页目录</div><p class="page-directory-title">互动实验</p><nav class="page-directory-nav" aria-label="互动实验快速目录"><a class="side-link active" href="#lab-picker" data-directory-link aria-current="location"><span class="directory-index" aria-hidden="true">01</span><span>选择实验</span></a><a class="side-link" href="#lab-stage" data-directory-link><span class="directory-index" aria-hidden="true">02</span><span>原理示意</span></a><a class="side-link" href="#slider-controls" data-directory-link><span class="directory-index" aria-hidden="true">03</span><span>调整参数</span></a><a class="side-link" href="#lab-results" data-directory-link><span class="directory-index" aria-hidden="true">04</span><span>观察结果与对照</span></a><a class="side-link" href="#lab-learning" data-directory-link><span class="directory-index" aria-hidden="true">05</span><span>读图与解释</span></a></nav><p class="directory-hint">点选目录，跳到本页对应内容。</p></aside>
+<main id="main"><details class="mobile-directory page-directory-mobile"><summary>本页目录 · 互动实验</summary><nav class="page-directory-nav" aria-label="互动实验手机快速目录"><a class="side-link active" href="#lab-picker" data-directory-link aria-current="location"><span class="directory-index" aria-hidden="true">01</span><span>选择实验</span></a><a class="side-link" href="#lab-stage" data-directory-link><span class="directory-index" aria-hidden="true">02</span><span>原理示意</span></a><a class="side-link" href="#slider-controls" data-directory-link><span class="directory-index" aria-hidden="true">03</span><span>调整参数</span></a><a class="side-link" href="#lab-results" data-directory-link><span class="directory-index" aria-hidden="true">04</span><span>观察结果与对照</span></a><a class="side-link" href="#lab-learning" data-directory-link><span class="directory-index" aria-hidden="true">05</span><span>读图与解释</span></a></nav></details>
+<div class="page-crumb"><a href="index.html">首页</a><span aria-hidden="true">/</span><span>互动实验</span></div>
+<section class="section" id="lab">
+  <div class="section-heading"><div><span class="section-number">动手看看</span><h1>动一下，让原理自己说话。</h1></div><span class="lab-label">10 个互动实验</span></div>
+  <p class="lab-heading-copy">选一个实验，动一下参数。先看变化，再慢慢理解原理。</p>
+  <div class="lab">
+    <details class="lab-picker" id="lab-picker" open>
+      <summary><span>选择实验</span><strong id="lab-picker-current">回波定位</strong><span class="picker-toggle" aria-hidden="true"></span></summary>
+      <div class="lab-tabs" role="tablist" aria-label="按功能选择实验" id="lab-tabs"></div>
+    </details>
+    <div class="lab-nav" aria-label="实验顺序"><button type="button" id="previous-experiment" aria-label="上一个实验">← 上一个</button><span id="lab-progress">1 / 10 · 回波定位</span><button type="button" id="next-experiment" aria-label="下一个实验">下一个 →</button></div>
+    <div class="lab-body" id="lab-panel" role="tabpanel" aria-labelledby="tab-echo" tabindex="0">
+      <div class="lab-stage" id="lab-stage">
+        <div class="stage-top"><span id="stage-caption">返回得越晚，位置就越远。</span><span class="demo-tag">原理示意</span></div>
+        <div id="lab-scene-status" class="lab-scene-status" role="status" hidden><p id="lab-scene-message">正在准备装置…</p><button type="button" id="retry-lab-scene" hidden>重新加载装置</button></div>
+        <div id="lab-apparatus" class="lab-apparatus iso" hidden></div>
+        <div class="apparatus-inspector" id="apparatus-inspector" hidden>
+          <div class="inspect-toolbar"><span>认识装置</span><div id="inspect-buttons" role="group" aria-label="选择装置的关键结构"></div></div>
+          <div class="inspect-explanation" id="inspect-explanation" hidden><div><strong id="inspect-title"></strong><button type="button" id="inspect-close" aria-label="收起结构解释">收起</button></div><p id="inspect-copy"></p></div>
+        </div>
+        <div id="mobile-control-slot" class="mobile-control-slot" hidden><div class="mobile-reading"><span id="mobile-result-label"></span><strong id="mobile-result-value"></strong></div><div id="mobile-insight-slot"></div></div>
+        <svg id="lab-svg" viewBox="0 0 760 420" role="img" aria-labelledby="svg-title svg-desc"><title id="svg-title">光脉冲回波定位</title><desc id="svg-desc">改变位置，比较光的往返时间。</desc><g id="scene"></g></svg>
+        <div class="stage-bottom"><span id="stage-hint" class="stage-hint">移动位置，比较回波的往返时间。</span><div class="stage-reading"><span id="stage-reading"></span><a class="stage-parameter-link" href="#slider-controls">调整参数 ↓</a></div>
+          <div class="animation-tools" id="animation-tools"><button type="button" id="play-button" class="play-button" aria-pressed="true">暂停动画</button><button type="button" id="step-button" class="play-button">前进一步</button><label for="animation-speed">播放速度 <select id="animation-speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option></select></label></div>
+          <div class="static-note" id="static-note" hidden>静态响应图 · 调整参数即可看见变化。</div>
+        </div>
+      </div>
+      <div class="lab-controls">
+        <div class="control-intro"><span class="control-kicker">试着改变</span><h3 id="lab-title">回波，怎么知道位置？</h3><details class="control-explanation"><summary>这个实验在讲什么？</summary><p id="lab-copy">发出一束短光，用往返时间判断沿线位置。</p></details></div>
+        <div class="parameter-column" id="parameter-home"><div id="lab-parameter-inputs">
+          <div id="slider-controls">
+            <div class="lab-control" id="position-control"><label for="position">观察位置 <output id="position-value" for="position position-number">600 m</output></label><div class="control-inputs"><input id="position" type="range" min="50" max="950" step="10" value="600"><input id="position-number" type="number" min="50" max="950" step="10" value="600" aria-label="观察位置数值（米）" aria-describedby="control-error"></div><div class="control-scale" aria-hidden="true"><span>50 m</span><span>950 m</span></div></div>
+            <div class="lab-control" id="strength-control" hidden><label for="strength"><span id="strength-label">局部温度</span><output id="strength-value" for="strength strength-number">60 °C</output></label><div class="control-inputs"><input id="strength" type="range" min="0" max="120" step="1" value="60"><input id="strength-number" type="number" min="0" max="120" step="1" value="60" aria-label="局部温度数值" aria-describedby="control-error"></div><div class="control-scale" aria-hidden="true"><span id="strength-min">0 °C</span><span id="strength-max">120 °C</span></div></div>
+          </div>
+          <p id="control-error" class="control-error" role="status" hidden></p>
+          <p class="presets-label">一键试试看</p><div id="lab-presets" class="lab-presets" role="group" aria-label="快捷实验情景"></div>
+        </div></div>
+        <div class="result-column" id="lab-results">
+          <div class="lab-result" aria-live="polite" aria-atomic="true"><span id="result-label">回波往返时间</span><strong id="result-value">5.88 <small>μs</small></strong><p id="result-copy">距离包含去程与回程。</p></div>
+          <div class="lab-actions" id="lab-action-inputs"><button type="button" class="compare-button" id="compare-button">记录当前作对照</button><button type="button" class="reset-button" id="reset-button">重置本实验</button><a class="stage-return" href="#lab-stage">看图中变化 ↑</a></div>
+          <div class="lab-comparison" id="lab-comparison" hidden><div class="comparison-heading"><strong>记录与当前</strong><button type="button" id="clear-comparison">清除对照</button></div><div class="comparison-grid"><div><span>记录参数</span><strong id="reference-parameter"></strong><strong id="reference-result"></strong></div><div><span>当前参数</span><strong id="current-parameter"></strong><strong id="current-result"></strong></div></div><div class="comparison-insight" id="comparison-insight" role="status" aria-live="polite" aria-atomic="true" hidden><strong id="comparison-headline"></strong><p id="comparison-explanation"></p></div><p id="comparison-note" class="comparison-note"></p></div>
+        </div>
+      </div>
+    </div>
+    <details class="lab-learning learning-drawer" id="lab-learning"><summary>想看懂这幅图？展开三步解释</summary><div class="learning-drawer-body">
+      <h3 class="learning-title">按这三步读图</h3><ol class="lab-steps" id="lab-steps"></ol>
+      <div class="lab-observation"><strong>现在看到了什么？</strong><p id="observation-copy"></p></div>
+      <details class="lab-challenge" id="lab-challenge"><summary><span id="challenge-question"></span> <span class="quiet">· 点开看解释</span></summary><p id="challenge-answer"></p></details>
+      <details class="lab-model" id="lab-model"><summary>想知道怎么算？查看本图的模型与单位</summary><p id="model-copy"></p></details>
+      <div class="lab-related" id="lab-related"></div>
+    </div></details>
+    <div class="lab-note">这是原理示意，数值不代表仪器性能。参数与对照会在当前浏览器标签页中保留。</div>
+  </div>
+</section>
+<nav class="page-pagination" aria-label="继续学习"><a href="methods.html"><span>← 上一页</span><strong>测试方法</strong></a><a href="terms.html"><span>下一页 →</span><strong>术语词典</strong></a></nav>
+<footer><div><a class="footer-brand" href="index.html">光纤传感小百科</a><p>从看懂一束光开始。</p></div><details class="source-links"><summary>延伸阅读与资料</summary><div class="source-list"><a href="https://www.apsensing.com/en/technology-and-products/distributed-temperature-sensing" target="_blank" rel="noopener noreferrer">AP Sensing · DTS 原理</a><a href="https://silixa.com/technology/idas-intelligent-distributed-acoustic-sensor/" target="_blank" rel="noopener noreferrer">Silixa · 相位与动态应变</a><a href="https://arxiv.org/abs/1907.07675" target="_blank" rel="noopener noreferrer">论文 · DVS 的不同实现</a><a href="https://www.lunainc.com/sites/default/files/assets/files/LUN-20-101%20-%20Interactive%20PDF_v8.pdf" target="_blank" rel="noopener noreferrer">Luna · 光纤光栅</a></div></details></footer>
+</main></div>
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title"><div class="search-dialog-top"><h2 id="search-title">关键词检索</h2><button type="button" id="close-search" aria-label="关闭检索" title="关闭检索">×</button></div><form id="dialog-search-form" class="dialog-search" role="search" aria-label="检索网站内容"><input id="dialog-search-input" type="search" name="q" placeholder="试试温度、相位、光栅…" aria-label="检索关键词" autocomplete="off" maxlength="120"><button type="submit" class="button primary">搜索</button></form><p id="search-summary" class="search-summary" role="status" aria-live="polite"></p><div id="search-suggestions" class="search-suggestions" aria-label="试试这些关键词"><button type="button" data-search-query="温度">温度</button><button type="button" data-search-query="振动">振动</button><button type="button" data-search-query="FBG">FBG</button><button type="button" data-search-query="相位">相位</button></div><div id="search-results" class="search-results"></div></dialog>
+<dialog id="term-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span id="dialog-category"></span><div class="dialog-actions"><button type="button" id="dialog-back" hidden>← 返回上一项</button><button type="button" id="copy-detail-link">复制链接</button><button type="button" id="close-dialog" aria-label="关闭详情">×</button></div></div><div class="detail-share"><span id="detail-share-status" role="status"></span><input id="detail-share-url" readonly hidden aria-label="当前详情链接"></div><div id="dialog-content"></div></dialog>
+<script src="terms.js?v=13" defer></script><script src="functions.js?v=13" defer></script><script src="methods.js?v=14" defer></script><script src="lab-models.js?v=13" defer></script><script src="lab-content.js?v=13" defer></script><script src="experiments.js?v=13" defer></script><script src="anatomy/lab-scenes.js?v=2" defer></script><script src="anatomy/scene-loader.js?v=1" defer></script><script src="anatomy/seven-runtime.js?v=1" defer></script><script src="anatomy/lab-runtime.js?v=2" defer></script><script src="lab-learning.js?v=1" defer></script><script src="lab-controller.js?v=14" defer></script><script src="card-illustrations.js?v=17" defer></script><script src="detail-illustrations.js?v=19" defer></script><script src="methods-view.js?v=13" defer></script><script src="detail-reading.js?v=1" defer></script><script src="detail-navigation.js?v=1" defer></script><script src="app.js?v=16" defer></script><script src="search-content.js?v=13" defer></script><script src="header-tools.js?v=14" defer></script>
+<script src="page-directory.js?v=13" defer></script>
+</body></html>

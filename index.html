@@ -1,94 +1,108 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://fiber-sensing-guide.hejd1993.chatgpt.site/index.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="光纤传感小百科">
+<meta property="og:title" content="光纤传感小百科 · 看得懂的光纤传感">
+<meta property="og:description" content="一根光纤，也能感知世界。从生活中的变化开始，认识光纤传感、动手做实验、读懂新概念。">
+<meta property="og:url" content="https://fiber-sensing-guide.hejd1993.chatgpt.site/index.html">
+<meta property="og:image" content="https://fiber-sensing-guide.hejd1993.chatgpt.site/images/fiber-world-v1.png">
+<meta name="theme-color" content="#315be8">
 <title>光纤传感小百科 · 看得懂的光纤传感</title>
-<meta name="description" content="从零认识光纤传感。按温度、应变、振动、压力、形状、转动、化学与生物、电磁量八类功能认识光纤传感，按七类测试方法理解怎么测，探索十个互动实验和术语词典。">
-<meta name="theme-color" content="#3459df">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233459df'/%3E%3Cpath d='M5 16h5l3-7 6 14 3-7h5' fill='none' stroke='white' stroke-width='2.5' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="readability.css"><link rel="stylesheet" href="functions.css"><link rel="stylesheet" href="lab.css">
-<link rel="stylesheet" href="methods.css"><link rel="stylesheet" href="layout.css">
+<meta name="description" content="一根光纤，也能感知世界。从生活中的变化开始，认识光纤传感、动手做实验、读懂新概念。">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23315be8'/%3E%3Cpath d='M5 16h5l3-7 6 14 3-7h5' fill='none' stroke='white' stroke-width='2.5'/%3E%3C/svg%3E">
+<script src="theme-init.js?v=13"></script>
+<script src="page-transitions.js?v=13"></script>
+<link rel="stylesheet" href="style.css?v=13">
+<link rel="stylesheet" href="readability.css?v=13">
+<link rel="stylesheet" href="functions.css?v=13">
+<link rel="stylesheet" href="lab.css?v=13">
+<link rel="stylesheet" href="methods.css?v=13">
+<link rel="stylesheet" href="layout.css?v=13">
+<link rel="stylesheet" href="pages.css?v=13">
+<link rel="stylesheet" href="friendly.css?v=14">
+<link rel="stylesheet" href="header-tools.css?v=13">
+<link rel="stylesheet" href="page-transitions.css?v=13">
+<link rel="stylesheet" href="page-directory.css?v=13">
+<link rel="stylesheet" href="illustrations.css?v=17">
+<link rel="stylesheet" href="site-design.css?v=1">
+<link rel="stylesheet" href="site-pages.css?v=1">
+<link rel="stylesheet" href="home-immersive.css?v=1">
+<link rel="stylesheet" href="detail-reading.css?v=1">
 </head>
-<body>
+<body data-page="intro" class="field-guide">
+<noscript><div class="noscript-note">JavaScript 未启用，仍可阅读页面正文。功能图鉴、测试方法和术语词典的卡片可打开完整文字资料；互动实验和搜索需要启用 JavaScript。</div></noscript>
 <a class="skip" href="#main">跳到主要内容</a>
-<header class="topbar"><a class="brand" href="#intro" aria-label="光纤传感小百科首页"><span class="brand-icon" aria-hidden="true">∿</span><span>光纤传感小百科<small>FIBER FIELD GUIDE</small></span></a><nav class="topnav" aria-label="主导航"><a href="#guide">功能图鉴</a><a href="#methods">测试方法</a><a href="#lab">互动实验</a><a href="#terms">术语词典</a></nav><span class="header-note">让光纤传感，变得好懂。</span></header>
-<div class="shell">
-<aside class="sidebar"><div class="side-kicker">从一束光开始</div><nav aria-label="学习目录"><a class="side-link active" href="#intro"><span class="nav-symbol">◈</span>认识光纤传感</a><a class="side-link" href="#guide"><span class="nav-symbol">▦</span>按功能认识传感</a><a class="side-link" href="#methods"><span class="nav-symbol">λ</span>测试方法图鉴<span class="side-pill">7</span></a><a class="side-link" href="#lab"><span class="nav-symbol">∿</span>互动原理实验<span class="side-pill">10</span></a><a class="side-link" href="#terms"><span class="nav-symbol">Aa</span>术语词典</a><a class="side-link" href="#questions"><span class="nav-symbol">?</span>那些常见的误会</a></nav><div class="side-divider"></div><div class="side-kicker">你想测什么？</div><div class="quick-links" id="function-nav"></div><div class="side-bottom"><span class="tiny-fiber" aria-hidden="true"></span><p>不需要先学公式。<br>从一个问题、一幅图开始。</p></div></aside>
-<main id="main"><details class="mobile-directory"><summary>学习目录 · 按功能找传感</summary><nav aria-label="手机学习目录"><a href="#guide">功能图鉴</a><a href="#methods">测试方法</a><a href="#lab">互动实验</a><a href="#terms">术语词典</a><a href="#questions">常见问题</a></nav><div class="mobile-function-grid" id="mobile-functions"></div></details>
-<section class="intro" id="intro"><div class="eyebrow"><span></span>光纤传感 · 零基础入门</div><h1>一根光纤，<br>怎样<span>感知一个世界？</span></h1><p class="intro-copy">它不只用来上网。让光走进去，读懂返回的微小变化，<br class="desktop-break">从温度、伸缩到转动与化学信息，不同设计让光纤拥有不同的感知能力。</p><div class="intro-bottom"><a class="button primary" href="#guide">我想测什么？</a><a class="text-link" href="#methods">想知道怎么测？</a><a class="text-link" href="#lab">先玩一个小实验</a><a class="text-link" href="#terms">遇到生词？在这里查</a></div><div class="intro-diagram" aria-label="光纤传感过程示意"><span class="diagram-label">发出光</span><div class="diagram-fiber"><i></i><i></i><i></i><b>温度</b><b>振动</b><b>拉伸</b></div><span class="diagram-label">读变化</span></div></section>
-<section class="section" id="guide"><div class="section-heading"><div><span class="section-number">01 / WHAT TO MEASURE</span><h2>先想测什么，再看怎么测。</h2></div><span class="quiet">八类功能 · 从问题开始</span></div><p class="section-copy">温度、应变、转动……这是要测的对象。光栅、散射、干涉……是读取变化的办法。同一种办法，经过不同设计，可以服务多个功能。</p><div class="guide-grid" id="function-grid"></div><p class="guide-next-step">想了解测量原理？<a href="#methods">继续看测试方法 →</a></p></section>
-<section class="section" id="methods">
-  <div class="section-heading"><div><span class="section-number">02 / HOW TO MEASURE</span><h2>同一个问题，光可以有不同的测法。</h2></div><span class="lab-label">7 类测试方法</span></div>
-  <p class="section-copy">先看光为什么会变，再看仪器怎样读出来。下面按技术原理分类，每类都有典型方法、测量流程和能动手观察的实验。一种方法可以服务多个功能，几种原理也可以组合使用。</p>
-  <details class="layout-explainer measurement-levels" id="measurement-levels">
-    <summary>先分清：测什么、怎么测、测哪里</summary>
-    <div class="classification-note"><span><b>测什么</b>温度、应变等八类功能</span><span><b>怎么测</b>光栅、散射、干涉等技术</span><span><b>测哪里</b>点式、准分布式、分布式等布点方式</span></div>
-    <h3 class="measurement-subheading">布点方式：点式、准分布式、分布式</h3>
-    <div class="layout-grid"><p><strong>点式：一个关键位置。</strong>像放一个探头，只观察关心的局部。</p><p><strong>准分布式：一串固定测点。</strong>多个光栅等元件共用光纤，逐个读取；测点之间并不自动连续感知。</p><p><strong>分布式：一条连续感知线。</strong>沿光纤读取许多位置的响应，仍有空间分辨率和采样范围限制。</p></div><p>这是具体方案的布点方式，不是温度、振动等功能的替代分类。光纤陀螺等专用系统也不需要硬套进沿线布点标签。</p>
-  </details>
-  <div class="method-grid" id="method-grid"></div>
-  <details class="layout-explainer" id="method-names"><summary>几个名称为什么不能直接并列？</summary>
-    <div class="method-levels">
-      <div><h3>① 光为什么改变？</h3><p>光栅、瑞利、拉曼、布里渊、干涉等，描述光学响应或感知原理。它们可以交叉：瑞利回波也能通过干涉来读相位。</p></div>
-      <div><h3>② 仪器怎样读取与定位？</h3><p>OTDR、OFDR 等说明读出与定位方式；光强、波长、相位、频移与偏振说明读哪种信息。仪器也可能通过光强来读出相位变化。</p></div>
-      <div><h3>③ 最后要测什么？</h3><p>DTS、DAS、DVS 等是功能名称。DTS 可以有拉曼或布里渊等实现，DAS 与 DVS 的命名也可能重叠。</p></div>
-    </div>
-    <div class="method-comparisons">
-      <div class="method-comparison"><h3>OTDR 与 OFDR：怎样区分沿线位置？</h3><p>OTDR 发光脉冲，按回波往返时间换算距离。常见相干瑞利 OFDR 扫动激光光频率，通过参考光干涉及频域处理映射位置。另有用于拉曼测温等场景的非相干频域定位，对连续光作调制后处理频域信号，两种实现应分别说明。</p></div>
-      <div class="method-comparison"><h3>BOTDR 与 BOTDA：光怎样接入？</h3><p>两者都利用布里渊响应。常见 BOTDR 从一端接收自发散射；典型 BOTDA 使用反向传播的泵浦与探测光读取受激响应，需要两端光路接入。特殊变体可能不同，不能只看缩写就判断性能。</p></div>
-    </div>
-    <p class="method-boundary">读波长、读相位、读频移，不等于能直接读出所有物理量。封装、耦合、补偿与标定决定怎样换算。<br>原理资料：<a href="https://lios.lunainc.com/technology/advanced-localization-techniques/" target="_blank" rel="noopener noreferrer">Luna · 定位方法</a> · <a href="https://lunainc.com/sites/default/files/assets/files/resource-library/IMECE2016-66697.pdf" target="_blank" rel="noopener noreferrer">Luna · 瑞利 OFDR</a> · <a href="https://web-material3.yokogawa.com/1/11298/tabs/rd-te-r05602-009.pdf" target="_blank" rel="noopener noreferrer">横河 · 布里渊方法</a></p>
-  </details>
-</section>
-<section class="section" id="lab">
-  <div class="section-heading"><div><span class="section-number">03 / PLAY &amp; UNDERSTAND</span><h2>动一下，让原理自己说话。</h2></div><span class="lab-label">10 个互动实验</span></div>
-  <p class="lab-heading-copy">选一个情景，观察图形，再记录一次作对照。每个实验都能从“改变了什么”一路看到“光怎样作回答”。</p>
-  <div class="lab">
-    <details class="lab-picker" id="lab-picker" open>
-      <summary><span>选择实验</span><strong id="lab-picker-current">回波定位</strong><span class="picker-toggle" aria-hidden="true"></span></summary>
-      <div class="lab-tabs" role="tablist" aria-label="按功能选择实验" id="lab-tabs"></div>
-    </details>
-    <div class="lab-nav" aria-label="实验顺序"><button type="button" id="previous-experiment" aria-label="上一个实验">← 上一个</button><span id="lab-progress">1 / 10 · 回波定位</span><button type="button" id="next-experiment" aria-label="下一个实验">下一个 →</button></div>
-    <div class="lab-body" id="lab-panel" role="tabpanel" aria-labelledby="tab-echo" tabindex="0">
-      <div class="lab-stage" id="lab-stage">
-        <div class="stage-top"><span id="stage-caption">返回得越晚，位置就越远。</span><span class="demo-tag">原理示意</span></div>
-        <svg id="lab-svg" viewBox="0 0 760 420" role="img" aria-labelledby="svg-title svg-desc"><title id="svg-title">光脉冲回波定位</title><desc id="svg-desc">改变位置，比较光的往返时间。</desc><g id="scene"></g></svg>
-        <div class="stage-bottom"><span id="stage-hint" class="stage-hint">移动位置，比较回波的往返时间。</span><div class="stage-reading"><span id="stage-reading"></span><a class="stage-parameter-link" href="#slider-controls">调整参数 ↓</a></div>
-          <div class="animation-tools" id="animation-tools"><button type="button" id="play-button" class="play-button" aria-pressed="true">暂停动画</button><button type="button" id="step-button" class="play-button">前进一步</button><label for="animation-speed">播放速度 <select id="animation-speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option></select></label></div>
-          <div class="static-note" id="static-note" hidden>静态响应图 · 调整参数即可看见变化。</div>
-        </div>
+<header class="topbar"><a class="brand" href="index.html" aria-label="光纤传感小百科首页"><span class="brand-icon" aria-hidden="true">∿</span><span>光纤传感小百科<small>从看懂一束光开始</small></span></a><nav class="topnav" aria-label="主导航"><a href="index.html" data-page-link="intro" class="active" aria-current="page">首页</a><a href="guide.html" data-page-link="guide">功能图鉴</a><a href="methods.html" data-page-link="methods">测试方法</a><a href="lab.html" data-page-link="lab">互动实验</a><a href="terms.html" data-page-link="terms">术语词典</a><a href="questions.html" data-page-link="questions">常见问题</a></nav><div class="header-tools"><form id="site-search-form" class="header-search" role="search" aria-label="全站关键词检索"><input id="site-search-input" type="search" name="q" placeholder="搜索关键词" aria-label="全站关键词" autocomplete="off" maxlength="120"><button type="submit" class="header-search-button" aria-label="搜索全站" title="关键词检索"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button></form><button type="button" id="theme-toggle" class="theme-toggle" aria-label="切换到黑夜模式" title="切换到黑夜模式" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14a8.5 8.5 0 0 1-10-10A8.5 8.5 0 1 0 20 14Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button></div></header>
+<div class="shell shell-no-directory shell-home">
+<main id="main" class="hp-main">
+  <section id="intro" class="hp-hero hp-hero--immersive" aria-labelledby="home-title">
+    <div class="hp-intro">
+      <p class="hp-audience"><span aria-hidden="true"></span>写给每一个好奇的人</p>
+      <h1 id="home-title">一根光纤，<br>也能感知世界。</h1>
+      <p class="hp-lead">让光走进去，读懂细微变化。<br>温度、伸缩、振动，都能留下线索。</p>
+      <div class="hp-actions">
+        <a class="hp-button hp-primary" href="guide.html">开始探索<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <a class="hp-button hp-secondary" href="lab.html"><span class="hp-play" aria-hidden="true">▷</span>先玩一个小实验</a>
       </div>
-      <div class="lab-controls">
-        <div class="control-intro"><span class="control-kicker">试着改变</span><h3 id="lab-title">回波，怎么知道位置？</h3><p id="lab-copy">发出一束短光，用往返时间判断沿线位置。</p></div>
-        <div class="parameter-column">
-          <div id="slider-controls">
-            <div class="lab-control" id="position-control"><label for="position">观察位置 <output id="position-value" for="position position-number">600 m</output></label><div class="control-inputs"><input id="position" type="range" min="50" max="950" step="10" value="600"><input id="position-number" type="number" min="50" max="950" step="10" value="600" aria-label="观察位置数值（米）" aria-describedby="control-error"></div><div class="control-scale" aria-hidden="true"><span>50 m</span><span>950 m</span></div></div>
-            <div class="lab-control" id="strength-control" hidden><label for="strength"><span id="strength-label">局部温度</span><output id="strength-value" for="strength strength-number">60 °C</output></label><div class="control-inputs"><input id="strength" type="range" min="0" max="120" step="1" value="60"><input id="strength-number" type="number" min="0" max="120" step="1" value="60" aria-label="局部温度数值" aria-describedby="control-error"></div><div class="control-scale" aria-hidden="true"><span id="strength-min">0 °C</span><span id="strength-max">120 °C</span></div></div>
-          </div>
-          <p id="control-error" class="control-error" role="status" hidden></p>
-          <p class="presets-label">一键试试看</p><div id="lab-presets" class="lab-presets" role="group" aria-label="快捷实验情景"></div>
-        </div>
-        <div class="result-column">
-          <div class="lab-result" aria-live="polite" aria-atomic="true"><span id="result-label">回波往返时间</span><strong id="result-value">5.88 <small>μs</small></strong><p id="result-copy">距离包含去程与回程。</p></div>
-          <div class="lab-actions"><button type="button" class="compare-button" id="compare-button">记录当前作对照</button><button type="button" class="reset-button" id="reset-button">重置本实验</button><a class="stage-return" href="#lab-stage">看图中变化 ↑</a></div>
-          <div class="lab-comparison" id="lab-comparison" hidden><div class="comparison-heading"><strong>记录与当前</strong><button type="button" id="clear-comparison">清除对照</button></div><div class="comparison-grid"><div><span>记录参数</span><strong id="reference-parameter"></strong><strong id="reference-result"></strong></div><div><span>当前参数</span><strong id="current-parameter"></strong><strong id="current-result"></strong></div></div><p id="comparison-note" class="comparison-note"></p></div>
-        </div>
+      <p class="hp-note">不用先学公式，从一幅图、一个问题开始。</p>
+    </div>
+    <figure class="hp-visual">
+      <picture class="hp-picture">
+        <source type="image/webp" srcset="images/fiber-world-v1-640.webp 640w, images/fiber-world-v1-960.webp 960w, images/fiber-world-v1-1536.webp 1536w" sizes="(max-width: 680px) 106vw, (min-width: 1800px) 1800px, 100vw">
+        <img src="images/fiber-world-v1.png" width="1536" height="1024" alt="一根发光光纤连接桥梁、管道与设备的概念插画" fetchpriority="high" decoding="async">
+      </picture>
+      <figcaption><span>一根光纤，连接细微变化与我们。</span><span class="hp-image-note">概念示意</span></figcaption>
+    </figure>
+  </section>
+
+<section class="hp-discover" aria-labelledby="discover-title">
+    <div class="hp-discover-heading">
+      <div><p class="hp-section-hint">从身边的变化出发</p><h2 id="discover-title">你想观察什么？</h2></div>
+      <fieldset class="hp-scene-picker"><legend class="hp-sr-only">选择一个观察场景</legend>
+        <label><input type="radio" name="scene" value="temperature" checked><span><b aria-hidden="true">°C</b>温度</span></label>
+        <label><input type="radio" name="scene" value="strain"><span><b aria-hidden="true">↔</b>伸缩</span></label>
+        <label><input type="radio" name="scene" value="vibration"><span><b aria-hidden="true">∿</b>振动</span></label>
+      </fieldset>
+    </div>
+    <div class="hp-scene-body">
+      <div class="hp-scenario-symbol" aria-hidden="true" id="scene-symbol">°C</div>
+      <div class="hp-scenario-copy"><h3 id="scene-question">哪里变热了，温度是多少？</h3><p id="scene-description">从一个测点到整条沿线，读出温度和热点。</p></div>
+      <a class="hp-scene-link" id="scene-experiment" href="lab.html?mode=dts"><span id="scene-action">动手观察温度</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+    </div>
+    <p id="scene-announcement" class="hp-sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+  </section>
+
+  <section class="hp-learning" aria-labelledby="learning-title">
+    <div class="hp-section-header"><div><p class="hp-section-hint">按自己的节奏认识它</p><h2 id="learning-title">好奇心，有好几个入口。</h2></div><p>先看懂，再试一试。<br>遇到新概念，随时回来查。</p></div>
+    <div class="hp-paths">
+      <a class="hp-path hp-path-main" href="guide.html">
+        <div class="hp-path-top"><span class="hp-path-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 8c-4-2-8-2-12-1v19c4-1 8-1 12 1 4-2 8-2 12-1V7c-4-1-8-1-12 1Zm0 0v19M8 12h4m-4 5h4m8-5h4m-4 5h4"/></svg></span><span class="hp-path-tag">功能图鉴</span></div>
+        <h3>光纤能测什么？</h3><p>从温度、振动等生活中的问题开始，<br>看看一束光可以帮我们发现什么。</p>
+        <div class="hp-measures" aria-label="图鉴包含的部分测量功能"><span>温度</span><span>应变</span><span>振动</span><span>压力</span><span>形状</span></div>
+        <span class="hp-path-bottom">打开功能图鉴<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+      </a>
+      <div class="hp-path-side">
+        <a class="hp-path hp-path-row" href="lab.html"><span class="hp-path-icon hp-icon-experiment"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="26" height="21" rx="4"/><path d="M7 16h4l3-6 5 12 3-6h3M11 29h10"/></svg></span><div><span class="hp-path-tag">互动实验</span><h3>亲手试一试</h3><p>动一下参数，看看图形怎样变化。</p></div><span class="hp-row-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+        <a class="hp-path hp-path-row" href="terms.html"><span class="hp-path-icon hp-icon-terms"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="14" cy="14" r="9"/><path d="m21 21 7 7M10 14h8m-4-4v8"/></svg></span><div><span class="hp-path-tag">术语词典</span><h3>遇到生词怎么办？</h3><p>用一句大白话，认识一个新概念。</p></div><span class="hp-row-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
       </div>
     </div>
-    <div class="lab-learning">
-      <h3 class="learning-title">按这三步读图</h3><ol class="lab-steps" id="lab-steps"></ol>
-      <div class="lab-observation"><strong>现在看到了什么？</strong><p id="observation-copy"></p></div>
-      <details class="lab-challenge" id="lab-challenge"><summary><span id="challenge-question"></span> <span class="quiet">· 点开看解释</span></summary><p id="challenge-answer"></p></details>
-      <details class="lab-model" id="lab-model"><summary>想知道怎么算？查看本图的模型与单位</summary><p id="model-copy"></p></details>
-      <div class="lab-related" id="lab-related"></div>
-    </div>
-    <div class="lab-note"><strong>原理示意，动手观察。</strong>动画刻意放慢；归一化幅度、曲线与颜色不代表真实仪器性能。实际测量需要合适的传感结构、封装、温度补偿和校准。对照仅在本次页面访问中保留。</div>
-  </div>
-</section>
-<section class="section" id="terms"><div class="section-heading"><div><span class="section-number">04 / THE DICTIONARY</span><h2>把生词，翻译成大白话。</h2></div><span class="quiet" id="term-count">光纤传感术语</span></div><div class="term-toolbar"><label class="search-box" for="search"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="搜索术语或问题，如：温度、相位" aria-label="搜索术语"><kbd>/</kbd></label><div class="function-filter-row"><div class="filter-group"><label for="function-filter">按测量功能</label><select id="function-filter"><option value="all">全部功能</option></select></div><div class="filter-group method-filter-group"><label for="method-filter">按测试方法</label><select id="method-filter"><option value="all">全部方法</option></select></div><button id="reset-filters" class="reset-filters">清除筛选与搜索</button></div><div class="filters" role="group" aria-label="按知识类别筛选"><button class="selected" aria-pressed="true" data-filter="all">全部</button><button aria-pressed="false" data-filter="basics">基础概念</button><button aria-pressed="false" data-filter="sensors">技术与方案</button><button aria-pressed="false" data-filter="scattering">光的散射</button><button aria-pressed="false" data-filter="parameters">性能参数</button><button aria-pressed="false" data-filter="signal">信号处理</button></div></div><div class="term-grid" id="term-grid"></div><div class="empty-state" id="empty" hidden><h3>暂时没有找到这个词</h3><p>试试“温度”“压力”或“光栅”，也可以调整功能或方法条件，也可以清除全部筛选与搜索。</p><button id="clear-search" class="button primary">显示全部术语</button></div><p class="term-help">功能、测试方法、知识类别和关键词会一起生效。点击词条，看比喻、原理与容易混淆的地方。</p></section>
-<section class="section" id="questions"><div class="section-heading"><div><span class="section-number">05 / A FEW GOOD QUESTIONS</span><h2>这些问题，你可能也想问。</h2></div></div><div class="faq-grid"><details><summary>光纤里，是不是装了很多小传感器？</summary><p>分布式传感通常利用光纤本身的散射，沿线取样，形成许多“虚拟测量点”，不需要每隔一米装一个电子探头。FBG 则是在指定位置制作光栅，多个光栅串起来叫准分布式。</p></details><details><summary>DAS 是不是一根超长的麦克风？</summary><p>这个比喻能帮助入门，但普通 DAS 主要感知沿光纤方向的动态应变或应变率。声音、地震、机械振动要先通过环境和光缆耦合成伸缩，才能被感知。它不直接等于空气声压，也不是接上就能听清对话。</p></details><details><summary>测量点间隔 1 米，就能分清相距 1 米的事件吗？</summary><p>不一定。采样间隔是“隔多远记录一次”，空间分辨率是“两个近邻变化能否分开”。相邻记录可能覆盖重叠的光纤段。DAS 的标距还决定应变在多长的一段上被平均。</p></details><details><summary>所有光纤，都能同时测温度和振动吗？</summary><p>光纤可以提供多种感知信息，但实际功能由光源、收发光路、光缆结构和处理方法共同决定。同一光缆里可以有不同用途的纤芯；同一纤芯的联合感知也需要相应设计。普通通信设备不会自动变成传感设备。</p></details><details><summary>信号越亮，测得就一定越准吗？</summary><p>还要看噪声、衰落、校准和耦合。DAS 可能遇到相干衰落：几份返回的光互相抵消，某段信号很弱。改进光路、频率或偏振多样性可以降低盲点风险，但单独做 Hilbert 变换不会消除衰落。</p></details><details><summary>温度、拉伸为什么有时会互相影响？</summary><p>它们都可能改变光纤长度和折射率。FBG 的反射波长、布里渊频移等会同时受温度与应变影响。要把两者分开，通常需要温度补偿、机械解耦、独立测温或联合测量。</p></details><details><summary>一种光纤，可以把八类功能都测出来吗？</summary><p>这里的八类是整个光纤传感领域的功能目录。每个系统都有自己的敏感元件、光路、封装与处理方法。一种传感器可能关联多个功能，但不会自动拥有全部能力。</p></details><details><summary>不怕电磁干扰，为什么还能测电流？</summary><p>普通光纤系统的抗干扰特性，与利用专门磁光材料、偏振光路和传感路径主动测电流，并不矛盾。电压探头还可能使用外置电光晶体，光纤负责传光。</p></details><details><summary>找到沿线 600 米处，就是知道三维坐标吗？</summary><p>回波定位给出沿光纤路径的距离。物体位移、倾角或三维形状需要其他测量信息、几何关系与参考姿态。不能把沿线距离直接当成空间坐标。</p></details><details><summary>光纤化学传感，能检测所有物质吗？</summary><p>探头通常针对特定材料或目标设计。选择性、污染与校准都会影响结果。实验中展示的 pH 响应是一种简化模型，不能代表所有探针，也不用于诊断。</p></details></div></section>
-<footer><div><a class="footer-brand" href="#intro">光纤传感小百科</a><p>从看懂一束光开始。</p></div><div class="source-links"><span>延伸阅读 · 原理资料</span><a href="https://www.apsensing.com/en/technology-and-products/distributed-temperature-sensing" target="_blank" rel="noopener noreferrer">AP Sensing · DTS 原理</a><a href="https://silixa.com/technology/idas-intelligent-distributed-acoustic-sensor/" target="_blank" rel="noopener noreferrer">Silixa · 相位与动态应变</a><a href="https://arxiv.org/abs/1907.07675" target="_blank" rel="noopener noreferrer">论文 · DVS 的不同实现</a><a href="https://www.lunainc.com/sites/default/files/assets/files/LUN-20-101%20-%20Interactive%20PDF_v8.pdf" target="_blank" rel="noopener noreferrer">Luna · 光纤光栅</a></div></footer>
-</main></div>
-<dialog id="term-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span id="dialog-category"></span><div class="dialog-actions"><button type="button" id="dialog-back" hidden>← 返回上一项</button><button type="button" id="close-dialog" aria-label="关闭详情">×</button></div></div><div id="dialog-content"></div></dialog>
-<script src="terms.js" defer></script><script src="functions.js" defer></script><script src="methods.js" defer></script><script src="lab-models.js" defer></script><script src="lab-content.js" defer></script><script src="experiments.js" defer></script><script src="lab-controller.js" defer></script><script src="methods-view.js" defer></script><script src="app.js" defer></script>
-</body></html>
+    <div class="hp-further"><span>想多懂一点</span><a href="methods.html">光纤究竟怎么测<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a href="questions.html">解开常见疑问<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+  </section>
+
+<footer class="hp-footer"><div><a class="footer-brand" href="index.html"><span class="hp-footer-wave" aria-hidden="true">∿</span>光纤传感小百科</a><p>从看懂一束光开始。</p></div><details class="source-links"><summary>延伸阅读与资料</summary><div class="source-list"><a href="https://www.apsensing.com/en/technology-and-products/distributed-temperature-sensing" target="_blank" rel="noopener noreferrer">AP Sensing · DTS 原理</a><a href="https://silixa.com/technology/idas-intelligent-distributed-acoustic-sensor/" target="_blank" rel="noopener noreferrer">Silixa · 相位与动态应变</a><a href="https://arxiv.org/abs/1907.07675" target="_blank" rel="noopener noreferrer">论文 · DVS 的不同实现</a><a href="https://www.lunainc.com/sites/default/files/assets/files/LUN-20-101%20-%20Interactive%20PDF_v8.pdf" target="_blank" rel="noopener noreferrer">Luna · 光纤光栅</a></div></details></footer>
+</main>
+</div>
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title"><div class="search-dialog-top"><h2 id="search-title">关键词检索</h2><button type="button" id="close-search" aria-label="关闭检索" title="关闭检索">×</button></div><form id="dialog-search-form" class="dialog-search" role="search" aria-label="检索网站内容"><input id="dialog-search-input" type="search" name="q" placeholder="试试温度、相位、光栅…" aria-label="检索关键词" autocomplete="off" maxlength="120"><button type="submit" class="button primary">搜索</button></form><p id="search-summary" class="search-summary" role="status" aria-live="polite"></p><div id="search-suggestions" class="search-suggestions" aria-label="试试这些关键词"><button type="button" data-search-query="温度">温度</button><button type="button" data-search-query="振动">振动</button><button type="button" data-search-query="FBG">FBG</button><button type="button" data-search-query="相位">相位</button></div><div id="search-results" class="search-results"></div></dialog>
+<dialog id="term-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span id="dialog-category"></span><div class="dialog-actions"><button type="button" id="dialog-back" hidden>← 返回上一项</button><button type="button" id="copy-detail-link">复制链接</button><button type="button" id="close-dialog" aria-label="关闭详情">×</button></div></div><div class="detail-share"><span id="detail-share-status" role="status"></span><input id="detail-share-url" readonly hidden aria-label="当前详情链接"></div><div id="dialog-content"></div></dialog>
+
+<script src="terms.js?v=13" defer></script><script src="functions.js?v=13" defer></script><script src="methods.js?v=14" defer></script><script src="lab-content.js?v=13" defer></script><script src="card-illustrations.js?v=17" defer></script><script src="detail-illustrations.js?v=19" defer></script><script src="methods-view.js?v=13" defer></script><script src="detail-reading.js?v=1" defer></script><script src="detail-navigation.js?v=1" defer></script><script src="app.js?v=16" defer></script><script src="search-content.js?v=13" defer></script><script src="header-tools.js?v=14" defer></script>
+
+
+<script src="home-preview.js?v=1" defer></script>
+</body>
+</html>

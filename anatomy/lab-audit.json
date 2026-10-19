@@ -1,0 +1,167 @@
+[
+  {
+    "mode": "echo",
+    "parts": 54,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen",
+    "travel": 160.2
+  },
+  {
+    "mode": "pressure",
+    "parts": 64,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen",
+    "membrane": {
+      "x0": -4,
+      "x1": 84,
+      "y0": -12,
+      "y1": 22,
+      "z": 65,
+      "sag": 12,
+      "thickness": 0.7
+    },
+    "amount": 0
+  },
+  {
+    "mode": "dts",
+    "parts": 49,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen",
+    "label": "沿线拉曼测温教学台，局部热台沿光纤定位，温度改变两通道回波的相对比例。",
+    "travel": 160.2
+  },
+  {
+    "mode": "dvs",
+    "parts": 50,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen",
+    "label": "局部扰动教学台，激振头沿导轨定位，比较同一时刻参考与当前回波的逐点差异。",
+    "travel": 160.2
+  },
+  {
+    "mode": "das",
+    "parts": 47,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen",
+    "label": "相位读出教学仪，真实表盘式显示器中的指针表示瞬时相位差，光纤为被测段。",
+    "dial": {
+      "cx": 58,
+      "cy": -15.7,
+      "cz": 52,
+      "r": 18
+    }
+  },
+  {
+    "mode": "shape",
+    "parts": 49,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen",
+    "label": "多芯光纤平面弯曲夹具，柔性试件在两端固定，比较两侧纤芯的相对应变。",
+    "state": 0
+  },
+  {
+    "mode": "fog",
+    "parts": 60,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen",
+    "label": "光纤环转台，两束光沿同一敏感环反向传播，转台零位标记按相对角速度旋转。",
+    "coil": {
+      "cx": 45,
+      "cy": 0,
+      "z": 32.1,
+      "r": 33,
+      "hubZ": 34.1
+    }
+  },
+  {
+    "mode": "chemical",
+    "parts": 49,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen",
+    "label": "荧光探头样品台，敏感尖端接触样品浅皿，荧光亮度表示理想pH探针的归一化响应。",
+    "probe": {
+      "x": 53,
+      "y": 1,
+      "z": 16
+    }
+  },
+  {
+    "mode": "current",
+    "parts": 61,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen",
+    "label": "电流偏振教学台，导体穿过环形磁光传感光路，偏振仪的指针表示相对零电流的旋转角。",
+    "dial": {
+      "cx": 108,
+      "cy": 32.3,
+      "cz": 35,
+      "r": 7
+    },
+    "conductor": {
+      "x": 43,
+      "y": -6,
+      "z0": 18,
+      "z1": 60
+    }
+  },
+  {
+    "mode": "shape",
+    "parts": 49,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen",
+    "label": "多芯光纤平面弯曲夹具，柔性试件在两端固定，比较两侧纤芯的相对应变。",
+    "state": -100,
+    "snapshot": "-100"
+  },
+  {
+    "mode": "shape",
+    "parts": 49,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen",
+    "label": "多芯光纤平面弯曲夹具，柔性试件在两端固定，比较两侧纤芯的相对应变。",
+    "state": -50,
+    "snapshot": "-50"
+  },
+  {
+    "mode": "shape",
+    "parts": 49,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen",
+    "label": "多芯光纤平面弯曲夹具，柔性试件在两端固定，比较两侧纤芯的相对应变。",
+    "state": 50,
+    "snapshot": "50"
+  },
+  {
+    "mode": "shape",
+    "parts": 49,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen",
+    "label": "多芯光纤平面弯曲夹具，柔性试件在两端固定，比较两侧纤芯的相对应变。",
+    "state": 100,
+    "snapshot": "100"
+  },
+  {
+    "mode": "pressure",
+    "amount": 0.25,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen"
+  },
+  {
+    "mode": "pressure",
+    "amount": 0.5,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen"
+  },
+  {
+    "mode": "pressure",
+    "amount": 0.75,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen"
+  },
+  {
+    "mode": "pressure",
+    "amount": 1,
+    "failures": 0,
+    "report": "clearance: 0 problems\nclearance apart: 0 problems\nterminals: 0 ends not on a mount\nloose ends: 0\nscreen folds: 0\nsupport: 0 unsupported solids · 0 hanging tubes · 0 sunk pairs\ndepth order: 0 problems\nthrough in mid-flight: 0 pairs\nself-overlap: 0 chunks whose outline crosses itself on screen\nwobble: 0 smoothed profiles whose slope turns between its ends\nsaddles off their host apart: 0\nstand-in shapes: 0 items whose recorded shape covers too little of what it draws\ncrowding: 0 pairs where a bend or end touches another line on screen"
+  }
+]

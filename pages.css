@@ -1,0 +1,42 @@
+/* 独立主题页与首页入口，沿用百科的蓝白视觉。 */
+.topbar { gap:24px; }
+.topnav { gap:20px; }
+.topnav a { position:relative; }
+.topnav a.active { color:var(--blue); font-weight:650; }
+.topnav a.active::after { content:''; position:absolute; bottom:2px; left:0; right:0; height:3px; border-radius:3px; background:var(--blue); }
+.header-note { margin-left:auto; }
+.page-crumb { display:flex; align-items:center; gap:10px; color:var(--muted); font-size:.8rem; margin:0 0 18px; }
+.page-crumb a:hover { color:var(--blue); }
+body:not([data-page="intro"]) main > .section { padding-top:0; border-top:0; }
+.section-heading h1 { font-size:1.7rem; line-height:1.6; letter-spacing:-.025em; margin:8px 0 0; font-weight:650; }
+.home-directory { border-top:1px solid var(--line); padding-top:32px; }
+.page-card-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.page-card { min-width:0; display:flex; flex-direction:column; align-items:flex-start; padding:24px; border:1px solid var(--line); border-radius:14px; background:white; transition:transform .2s,border-color .2s; }
+.page-card:hover { border-color:#9db6f8; transform:translateY(-2px); }
+.page-card-symbol { display:grid; place-items:center; width:44px; height:44px; background:var(--soft); border-radius:12px; font-size:1.6rem; color:var(--blue); margin-bottom:10px; }
+.page-card h2 { font-size:1.1rem; margin:6px 0; }
+.page-card p { font-size:.9rem; line-height:1.8; color:var(--muted); margin:0 0 18px; }
+.page-card-link { margin-top:auto; color:var(--blue); font-size:.85rem; font-weight:600; }
+.page-pagination { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:34px; padding-top:24px; border-top:1px solid var(--line); }
+.page-pagination a { display:flex; flex-direction:column; gap:5px; padding:12px 16px; border:1px solid var(--line); border-radius:10px; background:white; }
+.page-pagination a:last-child { text-align:right; }
+.page-pagination span { color:var(--muted); font-size:.75rem; }
+.page-pagination strong { color:var(--blue); font-size:.9rem; font-weight:600; }
+@media(max-width:1400px) { .header-note { display:none; } }
+@media(max-width:1100px) { .topnav { gap:14px; } .topbar { gap:20px; } .page-card-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:720px) {
+  .topbar { gap:4px; padding:10px 18px 6px; }
+  .topnav { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); width:100%; gap:0 12px; }
+  .topnav a, .topnav a:first-child { justify-content:center; font-size:.8rem; padding:4px 2px; min-height:40px; }
+  .topnav a.active::after { bottom:3px; left:12px; right:12px; }
+  .section-heading h1 { font-size:1.4rem; line-height:1.55; margin-top:7px; }
+  .page-card-grid { grid-template-columns:1fr; gap:12px; }
+  .page-card { display:grid; grid-template-columns:44px minmax(0,1fr); column-gap:16px; padding:20px; }
+  .page-card-symbol { grid-row:1/4; margin:0; }
+  .page-card h2 { margin:0 0 6px; }
+  .page-card p { margin:0 0 10px; }
+  .home-directory { padding-top:24px; }
+  .page-crumb { margin-bottom:16px; }
+  .page-pagination { gap:12px; }
+  .page-pagination a { padding:12px; }
+}

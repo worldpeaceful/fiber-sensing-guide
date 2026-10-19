@@ -1,0 +1,63 @@
+/* 沿用现有实验台：图外标注、模型结论，以及同一组手机控件。 */
+.apparatus-notes>summary { display:none; }
+.apparatus-inspector { margin:10px 0 8px; }
+.inspect-toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; }
+.inspect-toolbar>span { color:var(--muted); font-size:11px; }
+#inspect-buttons { display:flex; flex-wrap:wrap; gap:6px; }
+#inspect-buttons button { min-height:36px; padding:6px 11px; font:inherit; font-size:12px; line-height:1.6; color:var(--ink); border:1px solid var(--line); border-radius:7px; background:var(--surface); cursor:pointer; }
+#inspect-buttons button::before { content:""; display:inline-block; width:5px; height:5px; margin-right:7px; border-radius:50%; background:var(--muted); vertical-align:middle; }
+#inspect-buttons button[aria-pressed="true"] { color:var(--blue); border-color:var(--blue); background:var(--soft); }
+#inspect-buttons button[aria-pressed="true"]::before { background:var(--blue); }
+.inspect-explanation { margin-top:9px; padding:11px 13px; border-left:2px solid var(--blue); background:var(--soft); font-size:12px; color:var(--ink); }
+.inspect-explanation>div { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.inspect-explanation p { margin:4px 0 0; line-height:1.85; color:var(--muted); }
+#inspect-close { color:var(--blue); font:inherit; font-size:11px; min-height:32px; padding:3px 6px; border:0; background:transparent; cursor:pointer; }
+[data-learn-target] { cursor:pointer; }
+[data-learn-target].is-inspected .iso-edge { stroke:var(--blue); stroke-width:1.5; }
+[data-learn-target].is-inspected .iso-top { fill:var(--anatomy-lit-top); }
+[data-learn-target].is-inspected [data-membrane-edge],
+[data-learn-target].is-inspected [data-bend-outline] { stroke:var(--blue); stroke-width:1.6; }
+path[data-learn-target].is-inspected { stroke:var(--blue); stroke-width:3; }
+rect[data-learn-target].is-inspected,circle[data-learn-target].is-inspected { stroke:var(--blue); stroke-width:2; }
+.comparison-insight { margin-top:14px; padding:13px 14px; background:var(--soft); border-left:3px solid var(--blue); color:var(--ink); }
+.comparison-insight>strong { display:block; font-size:14px; line-height:1.7; }
+.comparison-insight p { margin:6px 0 0; color:var(--muted); font-size:12px; line-height:1.9; }
+.mobile-control-slot[hidden],.apparatus-inspector[hidden],.inspect-explanation[hidden],.comparison-insight[hidden] { display:none!important; }
+@media(max-width:720px) {
+  .field-guide[data-page="lab"] .lab .lab-stage { padding:15px 14px 18px; scroll-margin-top:160px; }
+  .lab-apparatus.iso { margin-top:12px; }
+  .apparatus-notes>summary { display:list-item; font-size:11px; color:var(--muted); min-height:32px; padding:4px 0; cursor:pointer; }
+  .apparatus-notes .apparatus-caption { padding-bottom:10px; min-height:0; border:0; }
+  .apparatus-inspector { margin:4px 0 12px; }
+  .inspect-toolbar { display:block; }
+  .inspect-toolbar>span { display:none; }
+  #inspect-buttons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:5px; }
+  #inspect-buttons button { min-height:44px; padding:5px 4px; font-size:11px; }
+  #inspect-buttons button::before { margin-right:5px; width:4px; height:4px; }
+  .inspect-explanation { padding:9px 11px; }
+  .mobile-control-slot { border-block:1px solid var(--line); padding:14px 0; margin-bottom:9px; background:var(--surface-raised); color:var(--ink); }
+  .mobile-control-slot .lab-control { margin-bottom:12px; }
+  .field-guide[data-page="lab"] .mobile-control-slot .lab-control>label { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:5px; color:var(--ink); font-size:13px; }
+  .mobile-control-slot output { color:var(--blue); font-size:14px; font-weight:650; white-space:nowrap; }
+  .mobile-control-slot .control-inputs { display:grid; grid-template-columns:minmax(0,1fr) 72px; gap:13px; }
+  .mobile-control-slot input[type="number"] { width:100%; min-height:44px; font-size:16px; }
+  .mobile-control-slot input[type="range"] { width:100%; min-width:0; margin:0; min-height:36px; accent-color:#315be8; }
+  .mobile-control-slot .control-scale { font-size:10px; }
+  .mobile-control-slot .presets-label { margin:3px 0 7px; font-size:11px; }
+  .mobile-control-slot .lab-presets { margin:0; gap:5px; }
+  .field-guide[data-page="lab"] .mobile-control-slot .lab-presets button { min-height:40px; font-size:11px; padding:5px 8px; }
+  .mobile-reading { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-top:12px; color:var(--muted); font-size:11px; }
+  .mobile-reading strong { color:var(--blue); font-size:16px; white-space:nowrap; }
+  .mobile-control-slot .lab-actions { margin-top:12px; }
+  .field-guide[data-page="lab"] .mobile-control-slot .lab-actions button { min-height:44px; }
+  .mobile-control-slot .animation-tools { margin-top:12px; }
+  .mobile-control-slot .animation-tools label { font-size:11px; }
+  .mobile-control-slot .comparison-insight { padding:10px 11px; margin-top:12px; }
+  .field-guide[data-page="lab"] .anatomy-active #lab-svg { margin:15px 0; }
+  .mobile-control-slot:not([hidden]) ~ .stage-bottom .stage-parameter-link,
+  .mobile-control-slot .stage-return { display:none; }
+  #parameter-home:empty { display:none; }
+}
+@media(prefers-reduced-motion:reduce) {
+  [data-learn-target],#inspect-buttons button { transition:none; }
+}
